@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del repaso - Ejercicio 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Resultados del repaso de [TU NOMBRE]</h1>
+        <h2>Ejercicio 5: Formulario HTML5 - Pac-Man</h2>
+        <img src="https://placehold.co/600x300?text=Pac-Man"
+             alt="Videojuego Pac-Man" width="400">
+    </header>
+
+    <main>
+        <h2>Inscripción al torneo de Pac-Man</h2>
+
+        <form action="#" method="post">
+            <label for="carnet">Carnet de jugador:</label>
+            <input type="text" id="carnet" name="carnet"
+                   placeholder="Ej: 2026001" maxlength="7" required>
+            <br><br>
+
+            <label for="nombre">Nombre del jugador:</label>
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Escribe tu nombre" maxlength="50" required>
+            <br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="correo@ejemplo.com" required>
+            <br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Mínimo 6 caracteres" maxlength="20" required>
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad"
+                   min="15" max="60" placeholder="15 a 60" required>
+            <br><br>
+
+            <label for="fecha">Fecha de inscripción:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono"
+                   placeholder="8888-8888" maxlength="9">
+            <br><br>
+
+            <label for="personaje">Personaje:</label>
+            <select id="personaje" name="personaje" required>
+                <option value="">Seleccione</option>
+                <option value="pacman">Pac-Man</option>
+                <option value="blinky">Blinky (rojo)</option>
+                <option value="pinky">Pinky (rosa)</option>
+            </select>
+            <br><br>
+
+            <p>Nivel de dificultad:</p>
+            <input type="radio" id="facil" name="dificultad" value="facil">
+            <label for="facil">Fácil</label>
+            <input type="radio" id="dificil" name="dificultad" value="dificil">
+            <label for="dificil">Difícil</label>
+            <br><br>
+
+            <label for="observaciones">Observaciones:</label><br>
+            <textarea id="observaciones" name="observaciones"
+                      rows="4" cols="40" maxlength="200"
+                      placeholder="Escribe aquí tus observaciones"></textarea>
+            <br><br>
+
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">Acepto las reglas del torneo.</label>
+            <br><br>
+
+            <button type="submit">Inscribirse</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </main>
+    
+ <footer>
+   <p>[TU NOMBRE COMPLETO] - Bryan Antonio Zapata Zambrana</p>
+   <p>bryanzapata378@gmail.com - Ingeniería en telematica</p>
+ </footer>
+
+</body>
+</html>
+    <!--
+    =====================================================
+    PRUEBA REALIZADA
+    =====================================================
+    Al hacer clic en "Registrar" sin completar los campos
+    obligatorios (carnet, nombre, correo, contraseña, edad,
+    carrera y checkbox "acepto"), el navegador NO envía el
+    formulario. En su lugar aparece un mensaje emergente
+    del propio navegador indicando algo como:
+    "Rellena este campo" o "Completa este campo".
+    El foco se coloca automáticamente en el primer campo
+    que falta por completar. Esto ocurre gracias al
+    atributo required, que activa la validación nativa
+    de HTML5 sin necesidad de JavaScript.
+
+    =====================================================
+    RESPUESTAS A LAS PREGUNTAS DE ANÁLISIS
+    =====================================================
+
+    1) ¿Qué diferencia existe entre input type="text"
+       e input type="email"?
+       - type="text" acepta cualquier texto sin validar
+         formato.
+       - type="email" valida que el valor tenga forma de
+         correo (usuario@dominio). Si no cumple, el
+         navegador muestra un error al enviar.
+
+    2) ¿Para qué se utiliza el atributo name?
+       - Identifica el dato cuando se envía al servidor.
+         Es la "clave" con la que se recibe el valor en
+         el backend (por ejemplo, name="correo" llega
+         como correo=valor@ejemplo.com).
+
+    3) ¿Cuál es la diferencia entre radio y checkbox?
+       - radio: permite seleccionar UNA sola opción dentro
+         de un grupo (mismo name).
+       - checkbox: permite seleccionar VARIAS opciones de
+         forma independiente.
+
+    4) ¿Qué función cumple required?
+       - Obliga a que el campo tenga un valor antes de
+         permitir el envío del formulario. Si está vacío,
+         el navegador bloquea el envío y muestra un aviso.
+
+    5) ¿HTML5 permite almacenar directamente los datos
+       del formulario en una base de datos?
+       - NO. HTML5 solo se encarga de la estructura y la
+         validación en el navegador. Para guardar los
+         datos en una base de datos se necesita un
+         lenguaje del lado del servidor (PHP, Python,
+         Node.js, etc.) que reciba el formulario y los
+         inserte en la base de datos.
+    -->
